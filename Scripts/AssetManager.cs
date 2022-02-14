@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace CM.Managers
@@ -13,7 +14,8 @@ namespace CM.Managers
         {
             foreach (Object asset in _assetContainerSO.assets)
             {
-                if (string.Equals(name, asset.name))
+                // Evaluate both names with all spaces removed
+                if (string.Equals(Regex.Replace(name, @"s", ""), Regex.Replace(asset.name, @"s", "")))
                 {
                     return asset as T;
                 }
