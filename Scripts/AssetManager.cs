@@ -15,7 +15,7 @@ namespace CM.Managers
             foreach (Object asset in _assetContainerSO.assets)
             {
                 // Evaluate both names with all spaces removed
-                if (string.Equals(Regex.Replace(name, @"s", ""), Regex.Replace(asset.name, @"s", "")))
+                if (string.Equals(name.Replace(" ", string.Empty), asset.name.Replace(" ", string.Empty)))
                 {
                     return asset as T;
                 }
