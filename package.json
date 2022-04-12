@@ -1,7 +1,7 @@
 {
     "name": "com.cm.managers.unity",
     "displayName": "CM Managers Unity",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "unity": "2021.2",
     "author": "Casper Meloen",
     "description": "CM Managers Unity is a Unity package for adding global managers such as AssetManager.",

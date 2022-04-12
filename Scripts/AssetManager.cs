@@ -1,8 +1,8 @@
-using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace CM.Managers
 {
+    [DefaultExecutionOrder(100000)]
     public class AssetManager : MonoBehaviour
     {
         public static AssetManager Instance { get; private set; }
