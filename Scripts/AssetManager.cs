@@ -4,20 +4,7 @@ namespace CM.Managers
 {
     public class AssetManager : MonoBehaviour
     {
-        public static AssetManager Instance
-        {
-            get
-            {
-                if (Instance == null)
-                    Instance = FindObjectOfType<AssetManager>();
-
-                return Instance;
-            }
-            private set
-            {
-                Instance = value;
-            }
-        }
+        public static AssetManager Instance { get; private set; }
 
         [SerializeField]
         private AssetContainerSO _assetContainerSO;
