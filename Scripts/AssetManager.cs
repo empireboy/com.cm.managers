@@ -2,10 +2,22 @@ using UnityEngine;
 
 namespace CM.Managers
 {
-    [DefaultExecutionOrder(100000)]
     public class AssetManager : MonoBehaviour
     {
-        public static AssetManager Instance { get; private set; }
+        public static AssetManager Instance
+        {
+            get
+            {
+                if (Instance == null)
+                    Instance = FindObjectOfType<AssetManager>();
+
+                return Instance;
+            }
+            private set
+            {
+                Instance = value;
+            }
+        }
 
         [SerializeField]
         private AssetContainerSO _assetContainerSO;
